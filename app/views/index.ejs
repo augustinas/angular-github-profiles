@@ -1,14 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="GitUserSearch">
   <head>
     <meta charset="utf-8">
     <title>Github user search</title>
-    <link rel="stylesheet" href="libs/bootstrap.css">
-    <script src="libs/angular.js"></script>
-    <script src="libs/angular-resource.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/gitUserSearchController.js"></script>
-    <script src="js/searchFactory.js"></script>
+    <% include ./partials/links %>
   </head>
 
   <body ng-controller="GitUserSearchController as searchCtrl">
@@ -23,6 +18,7 @@
         <li>
           <img ng-src="{{user.avatar_url}}&s=50" style="height: 50px; width: 50px">
           <a ng-href="{{user.html_url}}">{{user.login}}</a>
+          <a ng-attr-id="{{user.login}}" ng-href="/users/{{user.login}}">{{user.login}}'s Mesa Profile</a>
         </li>
       </ul>
     </div>

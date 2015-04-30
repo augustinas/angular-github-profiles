@@ -3,7 +3,7 @@ describe('Github Profile finder', function() {
   var searchButton = element(by.className('btn'));
 
   beforeEach(function() {
-    browser.get('http://localhost:3000');
+    browser.get('http://localhost:5000');
   });
 
   it('has a title', function() {
